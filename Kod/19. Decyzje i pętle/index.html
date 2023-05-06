@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decyzje i pętle</title>
+    <script>
+        let n = 2;
+        if (n > 0) {
+            console.log('Jest większa od 0');
+        } else if (n == 0) {
+            console.log('Jest równe 0')
+        } else {
+            console.log('Jest mniejsze od 0')
+        }
+
+        let m = 3;
+
+        switch (m) {
+            case 1:
+                console.log('Jest równe 1');
+                break;
+            case 2:
+                console.log('Jest równe 2');
+                break;
+            case 3:
+                console.log('Jest równe 3');
+                break;
+            default:
+                console.log('Żadne z rozwiązań')
+                break;
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        let array = [1, 10, 30, 50];
+
+        for (let e of array) {
+            console.log(e);
+        }
+
+        let p = 10;
+        while (p < 1000) {
+
+
+            console.log('Wykonianie pętli while');
+            p++;
+        }
+
+        let o = 20;
+
+        do {
+            console.log('Wywołanie pętli do while');
+        } while ( o > 30);
+
+    //    do while kończymy średnikiem
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

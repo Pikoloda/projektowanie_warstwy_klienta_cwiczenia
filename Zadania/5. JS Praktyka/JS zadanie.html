@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie Formularz</title>
+    <style>
+      .margin {
+          margin-left: 20px;
+      }
+      #full-name-error {
+          font-size: 10px;
+          color: red;
+      }
+      #button {
+          margin-top: 20px;
+      }
+
+    </style>
+    <script>
+        window.onload = function () {
+            const MIN_FULLNAME_LENGTH = 3;
+
+            let fullNameInput = document.getElementById('full-name');
+            let fullNameErrorInput = document.getElementById('full-name-error');
+
+            document.querySelector('form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (validateForm()) {
+                    window.alert('Poprawnie wysłany formularz');
+                    console.log('Imię i Nazwisko pracownika: ' + fullNameInput.value);
+                }
+            }
+        };
+
+
+
+    </script>
+</head>
+<body>
+
+      <h1>Formularz Pracowników</h1>
+
+    <form>
+      <label class="margin" for="full-name">Imię i Nazwisko pracownika</label>
+      <input type="text" id="full-name" ><br>
+      <span class="margin" id="full-name-error" hidden>Nazwa pracownika powinna mieć długość min. 3 znaki</span><br>
+
+
+      <button id="button">Dodaj</button>
+
+
+    </form>
+
+
+</body>
+</html>

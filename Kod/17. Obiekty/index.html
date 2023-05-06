@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obiekty</title>
+    <script>
+        let person = {
+            firstName: 'Jan',
+            lastName: 'Kowalski',
+            introduce: function () {
+                console.log('Nazywam się ' + this.firstName + ' ' + this.lastName);
+            },
+        }
+
+        person.introduce();
+        person.firstName = 'Adam';
+        person.introduce();
+
+
+        function Car(brandOfCar, modelOfCar) {
+            this.brand = brandOfCar + '<---';
+            this.model = modelOfCar;
+
+            this.showDetails = function () {
+                console.log('Car: ' + this.brand + ' ' + this.model);
+            };
+        }
+
+        let fiat = new Car('Fiat', '126p');
+
+        fiat.showDetails()
+        fiat.brand = 'Maluch'
+        fiat.showDetails()
+
+
+
+        class House {
+            constructor(numberOfWindows, numberOfDoors) {
+                this.windows = numberOfWindows;
+                this.doors = numberOfDoors;
+            }
+
+            showDetails(){
+                console.log('Dom ma: ' + this.windows + ' okien ' + this.doors + ' drzwi.');
+            }
+        }
+
+        let house = new House(5, 2);
+        house.showDetails();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
